@@ -16,14 +16,20 @@ import javax.swing.JPanel;
 import javax.swing.Timer;
 
 public class Board extends JPanel implements ActionListener {
-
+    
+//taille du plateau
     private final int B_WIDTH = 300;
     private final int B_HEIGHT = 300;
+//taille des point et des pommes
     private final int DOT_SIZE = 10;
+//nombre maximum de point possible sur le plateau    
     private final int ALL_DOTS = 900;
+//position random des pommes
     private final int RAND_POS = 29;
+//vitesse du snake
     private final int DELAY = 140;
-
+    
+//Ces deux tableaux stockent les coordonnées x et y de toutes les articulations d'un serpent.
     private final int x[] = new int[ALL_DOTS];
     private final int y[] = new int[ALL_DOTS];
 
