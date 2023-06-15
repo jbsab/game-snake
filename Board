@@ -41,7 +41,8 @@ public class Board extends JPanel implements ActionListener {
     private Image ball;
     private Image apple;
     private Image head;
-
+    
+//création plateau (couleur et background)
     public Board() {
         
         initBoard();
@@ -57,7 +58,7 @@ public class Board extends JPanel implements ActionListener {
         loadImages();
         initGame();
     }
-
+//image pour le snake
     private void loadImages() {
 
         ImageIcon iid = new ImageIcon("src/resources/dot.png");
@@ -69,6 +70,7 @@ public class Board extends JPanel implements ActionListener {
         ImageIcon iih = new ImageIcon("src/resources/head.png");
         head = iih.getImage();
     }
+//début de partie avec 2 point minimum
 
     private void initGame() {
 
@@ -84,6 +86,7 @@ public class Board extends JPanel implements ActionListener {
         timer = new Timer(DELAY, this);
         timer.start();
     }
+//interface graphics
 
     @Override
     public void paintComponent(Graphics g) {
@@ -113,6 +116,7 @@ public class Board extends JPanel implements ActionListener {
             gameOver(g);
         }        
     }
+//fin de partie
 
     private void gameOver(Graphics g) {
         
@@ -157,6 +161,7 @@ public class Board extends JPanel implements ActionListener {
             y[0] += DOT_SIZE;
         }
     }
+// check colisions
 
     private void checkCollision() {
 
@@ -209,6 +214,7 @@ public class Board extends JPanel implements ActionListener {
 
         repaint();
     }
+//direction du snake
 
     private class TAdapter extends KeyAdapter {
 
